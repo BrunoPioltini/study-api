@@ -18,4 +18,5 @@ WORKDIR /app
 
 EXPOSE 80
 
+
 CMD java $JAVA_OPTS -jar app.jar
