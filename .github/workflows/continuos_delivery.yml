@@ -25,4 +25,4 @@ jobs:
     - name: build image
       run: docker build -t pioltini/study-api .
     - name: push to registry
-      run: docker push pioltini/dckr_pat_Qhdha354sYakg1ymoiqix0ejXRg
+      run: docker push pioltini/sutdy-api
