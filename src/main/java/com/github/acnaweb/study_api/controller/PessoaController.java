@@ -19,6 +19,7 @@ import com.github.acnaweb.study_api.controller.dto.SearchedPessoa;
 import com.github.acnaweb.study_api.model.Pessoa;
 import com.github.acnaweb.study_api.repository.PessoaRepository;
 import com.github.acnaweb.study_api.service.PessoaService;
+import org.springframework.beans.factory.annotation.Value;
 
 @RestController
 @RequestMapping("/pessoas")
@@ -29,6 +30,14 @@ public class PessoaController {
 	
 	@Autowired
 	private PessoaRepository pessoaRepository;
+
+	@Value("${mensagem}")
+	private String mensagem;
+
+	@GetMapping("/mensagem")
+	public String ping() {
+		return "Mensagem: " + mensagem;
+	}
 
 	@GetMapping
 	public List<SearchedPessoa> listAll() {
